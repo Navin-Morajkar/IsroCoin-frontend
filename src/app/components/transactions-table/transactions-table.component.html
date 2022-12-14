@@ -1,4 +1,4 @@
-<p *ngIf="transactions.length === 0">This block has no transactions</p>
+<p *ngIf="transactions.length === 0">This block has no Entries</p>
 
 <table class="table table-hover table-striped" *ngIf="transactions.length > 0">
   <thead>
@@ -6,7 +6,7 @@
       <th scope="col">#</th>
       <th scope="col">From</th>
       <th scope="col">To</th>
-      <th scope="col">Amount</th>
+      <th scope="col">Data</th>
       <th scope="col">Timestamp</th>
       <th scope="col">Valid?</th>
     </tr>
@@ -21,14 +21,14 @@
         <span *ngIf="tx.fromAddress === null">System</span>
 
         <span class="text-muted" *ngIf="blockchainService.addressIsFromCurrentUser(tx.fromAddress)">
-          <br><small>(That's yours!)</small>
+          <br><small>(Your Account)</small>
         </span>
       </td>
       <td class="text-truncate" style="max-width: 100px;">
           <a [routerLink]="['/wallet', tx.toAddress]">{{tx.toAddress}}</a>
 
           <span class="text-muted" *ngIf="blockchainService.addressIsFromCurrentUser(tx.toAddress)">
-            <br><small>(That's yours!)</small>
+            <br><small>(Your Account)</small>
           </span>
       </td>
       <td>

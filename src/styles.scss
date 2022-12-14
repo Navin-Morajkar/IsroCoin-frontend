@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 180;
+}
+
+#mainNavbar .nav-link {
+    color: #f7f7ff;
+}
+
+#mainNavbar .nav-link:hover {
+    color: #1ebe09;
+}
+
+#mainNavbar .navbar-brand {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 600;
+    align-self: center;
+
+}
